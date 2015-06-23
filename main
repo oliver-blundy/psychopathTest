@@ -1,0 +1,161 @@
+#include <iostream>
+
+using namespace std;
+
+int twenty = 20;
+
+int sum_array(int items[], int twenty);
+
+int main(){
+	//Basic introduction before start
+	cout << "This is the bash shell psychopath test app." << endl;
+	cout << "It is primitive, but it works." << endl;
+	cout << "The app is based upon the well-known (at least among psychologits) Hare PCL-R checklist" << endl;
+	
+	int begin;
+	
+	option:
+	
+		cout << "Enter the number 1 to begin." << endl;
+		cout << "Enter the number 0 to exit." << endl;
+		
+		cin >> begin;
+		cout << endl;
+		
+		if(begin==1){
+			goto begin;
+		} else{
+			goto end;
+		}
+	
+	//<<<<<<<<<<MAIN CODE STARTS HERE>>>>>>>>>>
+	
+	begin:
+		//Instructions
+		cout << "Welcome to the test!" << endl;
+		cout << "For each item, we will ask you to write wether you: " << endl;
+		cout << "0: Do not fit the criteria" << endl;
+		cout << "1: Partially fit the criteria" << endl;
+		cout << "2: Fit the criteria" << endl;
+		cout << "Let's begin!" << endl;
+		
+		int items [20];
+						
+		//Item 1
+		cout << "You are glib or possess superficial charm: ";
+		cin >> items [0];
+		cout << endl;
+		
+		//Item 2
+		cout << "You possess grandiose sense of self worth: ";
+		cin >> items [1];
+		cout << endl;
+		
+		//Item 3
+		cout << "You are a pathological liar: ";
+		cin >> items [2];
+		cout << endl;
+		
+		//Item 4
+		cout << "You are cunning/manipulative: ";
+		cin >> items [3];
+		cout << endl;
+		
+		//Item 5
+		cout << "You have lack of remorse or guilt: ";
+		cin >> items [4];
+		cout << endl;
+		
+		//Item 6
+		cout << "You are emotionally shallow: ";
+		cin >> items [5];
+		cout << endl;
+		
+		//Item 7
+		cout << "You are callous/lack empathy: ";
+		cin >> items [6];
+		cout << endl;
+
+		//Item 8
+		cout << "You fail to accept responsibility for your own actions: ";
+		cin >> items [7];
+		cout << endl;
+		
+		//Item 9
+		cout << "You need constant stimulation/you are prone to boredom: ";
+		cin >> items [8];
+		cout << endl;
+		
+		//Item 10
+		cout << "You have a parasitic lifestyle: ";
+		cin >> items [9];
+		cout << endl;
+		
+		//Item 11
+		cout << "You have a lack of realistic long term goals: ";
+		cin >> items [10];
+		cout << endl;
+		
+		//Item 12
+		cout << "You are impulsive: ";
+		cin >> items [11];
+		cout << endl;
+		
+		//Item 13
+		cout << "You are irresponsible: ";
+		cin >> items [12];
+		cout << endl;
+		
+		//Item 14
+		cout << "You have poor behavioural controls: ";
+		cin >> items [13];
+		cout << endl;
+		
+		//Item 15
+		cout << "You had from early behavioural problems: ";
+		cin >> items [14];
+		cout << endl;
+		
+		//Item 16
+		cout << "You were a delinquent as a juvenile: ";
+		cin >> items [15];
+		cout << endl;
+		
+		//Item 17
+		//Item 18
+		cout << "Criminal versatility: ";
+		cin >> items [17];
+		cout << endl;
+		
+		//Item 19
+		cout << "You have had many short-term marital relationship: ";
+		cin >> items [18];
+		cout << endl;
+		
+		//Item 20
+		cout << "You have promiscuous sexual behaviour: ";
+		cin >> items [19];
+		cout << endl;
+		
+		int score = sum_array(items, twenty);
+		cout << "Your overall score is " << score << " out of 40";
+		
+		goto option;
+		
+	//<<<<<<<<<<MAIN CODE ENDS HERE>>>>>>>>>>	
+		
+	end:
+		return 0;
+	
+}
+
+	int sum_array(int items[], int twenty){
+		int i;
+		int sum = 0;
+		for (i=0; i<20; i++){
+			sum = sum + items[i];
+		}
+		return(sum);
+	}
+
+//Copyright Oliver Blundy 2015
