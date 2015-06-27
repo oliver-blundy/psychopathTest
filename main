@@ -158,4 +158,4 @@ int main(){
 		return(sum);
 	}
 
-//Copyright Oliver Blundy 2015
+//Copyright Oliver Blundy 2015 and Ogie Yuki-Igbinosa 2015
